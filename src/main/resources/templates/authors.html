@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- Must import Thymeleaf namespace -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Framework Sample App</title>
+</head>
+<body>
+<h1>Author List</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+    </tr>
+    <!-- 'each' sets up Thymeleaf's iterator. This corresponds to the "books" attribute we set up in BookController. -->
+    <tr th:each="author : ${authors}">
+        <!-- Are these defaults? -->
+        <td th:text="${author.id}">123</td>
+        <td th:text="${author.firstName}">Anthony</td>
+        <td th:text="${author.lastName}">Doer</td>
+    </tr>
+</table>
+</body>
+</html>
