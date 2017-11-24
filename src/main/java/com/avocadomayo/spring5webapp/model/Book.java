@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+/** Annotating with @Entity converts POJO into JPA entities persisted by Hibernate */
 @Entity
 public class Book {
 
